@@ -16,7 +16,8 @@ var paths = {
     src: {
         srcHtml: './src/pages/*.html',
         srcHtmlNav: './src/*.html',
-        srcStyles: './src/scss/*.scss',
+        srcAllStyles: './src/scss/*.scss',
+        srcStyles: './src/scss/styles.scss',
         srcJs: './src/js/**/*.js',
         srsImages: './src/img/**/*.{png,jpg,jpeg,svg,gif}'
     },
@@ -123,7 +124,7 @@ function watch() {
         }
     });
     //watch for css files changes
-    gulp.watch(paths.src.srcStyles, styles)
+    gulp.watch(paths.src.srcAllStyles, styles)
     //watch for js files changes
     gulp.watch(paths.src.srcJs, scripts)
     gulp.watch(paths.src.srcHtml, html)

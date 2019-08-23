@@ -1,0 +1,107 @@
+.header {
+    height: 920px;
+
+    &_wrap {
+        padding-top: 57px;
+    }
+
+    &_top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 145px;
+
+        span {
+            color: $header-h-color;
+        }
+
+        p {
+            opacity: 0.65;
+        }
+    }
+
+    &_form {
+        
+    }
+}
+
+.logo {
+    border: 3px solid $header-top-color;
+    font-weight: $f-weight-h;
+    font-size: $f-size-h1;
+    padding: 9px 16px;
+    line-height: 35px;
+
+    &_fs {
+        text-transform: uppercase;
+        color: $main-color;
+        opacity: 0.7;
+    }
+
+    &_end {
+        color: $secondary-color;
+        opacity: 0.7;
+    } 
+}
+
+.nav_toggle {
+    position: relative;
+    float: right;
+    width: 34px;
+    height: 20px;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.nav_toggle span,
+.nav_toggle::before,
+.nav_toggle::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: $header-top-color;
+    top: 8px;
+}
+
+.nav_toggle::before,
+.nav_toggle::after {
+    content: '';
+    transition: transform .3s;
+}
+
+.nav_toggle::before {
+    top: 0;
+}
+
+.nav_toggle::after {
+    top: 16px;
+}
+
+.nav_toggle.active span {
+    display: none;
+}
+
+.nav_toggle.active::before {
+    transform: rotate(45deg);
+    top: 13px;
+}
+
+.nav_toggle.active::after {
+    transform: rotate(-45deg);
+    top: 13px
+}
+
+.slogan {
+    max-width: 720px;
+    width: 100%;
+}
