@@ -26,6 +26,24 @@ h2 {
   margin-bottom: 22px;
   line-height: 46px; }
 
+input, textarea {
+  outline: none; }
+
+::-webkit-input-placeholder {
+  text-transform: capitalize; }
+
+::-moz-placeholder {
+  text-transform: capitalize; }
+
+:-ms-input-placeholder {
+  text-transform: capitalize; }
+
+::-ms-input-placeholder {
+  text-transform: capitalize; }
+
+::placeholder {
+  text-transform: capitalize; }
+
 .wrapper {
   width: 100%;
   overflow: hidden;
@@ -55,6 +73,25 @@ h2 {
   flex-grow: 1;
   width: 100%; }
 
+.btn {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 55px 55px;
+  text-transform: capitalize; }
+  .btn_form {
+    margin-top: 20px;
+    padding-left: 66px;
+    padding-right: 66px;
+    background-color: #fc6744;
+    color: #ffffff; }
+    .btn_form span {
+      position: relative; }
+    .btn_form span::after {
+      position: absolute;
+      content: ' \f178';
+      font-family: 'FontAwesome';
+      right: -34px; }
+
 .flex_container {
   max-width: 1200px;
   width: 100%;
@@ -75,22 +112,37 @@ h2 {
   background-color: #ffffff;
   max-width: 372px;
   width: 100%;
-  padding: 26px 40px 20px; }
+  padding: 26px 40px 20px;
+  -webkit-box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);
+  box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);
+  position: absolute;
+  bottom: -3px; }
   .form-heading {
-    margin-bottom: 25px; }
+    margin: 0 0 22px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #fc6744;
+    opacity: 0.9; }
+    .form-heading span {
+      color: #000000; }
   .form_input {
     max-width: 294px;
     width: 100%;
     padding-bottom: 10px;
     border: none;
-    border-bottom: 1px solid; }
+    border-bottom: 1px solid #706b73; }
     .form_input-holder {
       max-width: 294px;
       width: 100%;
-      margin-top: 35px; }
+      margin-top: 33px; }
+      .form_input-holder textarea {
+        height: 87px;
+        resize: none; }
 
 .header {
-  height: 920px; }
+  height: 920px;
+  position: relative; }
   .header_wrap {
     padding-top: 57px; }
   .header_top {
@@ -113,6 +165,8 @@ h2 {
     align-items: center;
     text-align: center;
     margin-top: 145px; }
+    .header_info h2 {
+      opacity: 0.94; }
     .header_info span {
       color: #626262; }
     .header_info p {

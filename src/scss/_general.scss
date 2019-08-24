@@ -28,6 +28,14 @@
     margin-bottom: 22px;
     line-height: $f-line-height-h;
   }
+
+  input, textarea {
+    outline: none;
+  }
+    ::placeholder {
+    
+    text-transform: capitalize;
+}
   
   .wrapper {
     width: 100%;
@@ -51,4 +59,30 @@
   .main {
     flex-grow: 1;
     width: 100%;
+  }
+
+  .btn {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 55px 55px;
+    text-transform: capitalize;
+
+    &_form {
+      margin-top: 20px;
+      padding-left: 66px;
+      padding-right: 66px;
+      background-color: $main-color;
+      color: $third-color;
+
+      span {
+        position: relative;
+      }
+
+      span::after {
+        position: absolute;
+        content:  ' \f178';
+        font-family: 'FontAwesome';
+        right: -34px;
+      }
+    }
   }
